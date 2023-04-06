@@ -9,7 +9,6 @@
 | image_url| text | 200|  NOT NULL| image de la recette|
 | preparation_time| text |25 |NOT NULL| temps de préparation|
 | cooking_time| text | 25 | - | temps de cuisson|
-| category_id | Integer | - | - | catégorie de la recette|
 
 ## B. Table Recipe_has_ingredient
 
@@ -17,7 +16,6 @@
 |------------|-----------|--------------|-----------|-------------|
 |id|integer||GENERATED ALWAYS AS IDENTITY PRIMARY KEY, UNIQUE|Identifiant unique pour la table Player, générée automatiquement|
 |quantity | text | 25 | NOT NULL| quantité de l'ingrédient dans la recette|
-|image_url | text|200|-| image de l'ingrédient|
 |recipe_id |integer| -| NOT NULL | clé étrangère de la recette |
 |ingredient_id | integer| - | NOT NULL|clé étragère de l'ingrédient |
 
@@ -46,7 +44,15 @@
 | name | TEXT | 25| NOT NULL|nom de la categorie |
 | image_url | TEXT | 200| -| image de la categorie|
 
-## F. Table User
+## F. Table category_has_recipe
+
+| Field Name | Data type | Field Length | Constraint| Description |
+|------------|-----------|--------------|-----------|-------------|
+|id|integer||GENERATED ALWAYS AS IDENTITY PRIMARY KEY, UNIQUE|Identifiant unique pour la table Player, générée automatiquement|
+| category_id | integer|- | -| clé étrangère de la catégorie |
+| recipe_id | integer|- | -| clé étrangère de la recette |
+
+## G. Table User
 
 | Field Name | Data type | Field Length | Constraint| Description |
 |------------|-----------|--------------|-----------|-------------|
@@ -56,7 +62,7 @@
 | password |TEXT |-|NOT NULL | le mot de passe de l'utilisateur|
 | avatar_url |TEXT| 200|- | l'image de l'avatar de l'utilisateur|
 
-## G. Table Comment
+## H. Table Comment
 
 | Field Name | Data type | Field Length | Constraint| Description |
 |------------|-----------|--------------|-----------|-------------|
@@ -66,7 +72,7 @@
 | user_id |integer |-| NOT NULL| l'identifiant de l'utilsateur qui a posté le commentaire |
 | recipe_id |integer |- | NOT NULL| l'indentifiant de la recette sur laquelle est postée le commentaire|
 
-## H. Table Favorite
+## I. Table Favorite
 
 | Field Name | Data type | Field Length | Constraint| Description |
 |------------|-----------|--------------|-----------|-------------|
@@ -74,7 +80,7 @@
 | user_id | integer | -|NOT NULL | l'identifiant de l'utilisateur qui a la recette en favoris|
 | recipe_id | integer |- |NOT NULL | l'identifiant de la recette en favoris|
 
-## I. Table Note
+## J. Table Note
 
 | Field Name | Data type | Field Length | Constraint| Description |
 |------------|-----------|--------------|-----------|-------------|

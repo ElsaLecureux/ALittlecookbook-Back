@@ -6,6 +6,7 @@
 |---|---|----|-----|------|
 |/recipes|Récupérer toutes les recettes|-|-|-|
 |/recipe/:id|Récupérer une recette par son id|Créer une recette|Modifier une recette|Supprimer une recette|
+|/recipe/:id/categories|Récupérer les catégories d'une recette|-|-|-|
 
 ## Ingredient
 
