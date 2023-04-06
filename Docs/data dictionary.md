@@ -71,14 +71,14 @@
 | Field Name | Data type | Field Length | Constraint| Description |
 |------------|-----------|--------------|-----------|-------------|
 |id|integer||GENERATED ALWAYS AS IDENTITY PRIMARY KEY, UNIQUE|Identifiant unique pour la table Player, générée automatiquement|
-| user_id | integer | -|NOT NULL | |
-| recipe_id | integer |- |NOT NULL | |
+| user_id | integer | -|NOT NULL | l'identifiant de l'utilisateur qui a la recette en favoris|
+| recipe_id | integer |- |NOT NULL | l'identifiant de la recette en favoris|
 
 ## I. Table Note
 
 | Field Name | Data type | Field Length | Constraint| Description |
 |------------|-----------|--------------|-----------|-------------|
 |id|integer||GENERATED ALWAYS AS IDENTITY PRIMARY KEY, UNIQUE|Identifiant unique pour la table Player, générée automatiquement|
-| content | | | | |
-| user_id | | | | |
-| recipe_id | | | | |
+| content | text |- |NOT NULL | le contenu de la note|
+| user_id | integer |- | NOT NULL| identifiant de l'utilisateur qui laisse la note|
+| recipe_id |integer | -| NOT NULL| identifiant de la recette qui est notée|
