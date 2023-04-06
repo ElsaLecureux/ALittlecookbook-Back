@@ -1,7 +1,20 @@
 {
+  "name": "alittlecookbook-back",
+  "description": "MCD MLD réalisés avec Figma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "db:create": "psql -U littlecookbook -d littlecookbook -f Data/create_tables.sql",
+    "db:seed": "psql -U littlecookbook -d littlecookbook -f Data/import_data.sql",
+    "db:reset": "psql -U littlecookbook -d littlecookbook -f Data/create_tables.sql -f Data/import_data.sql",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-router": "^0.0.1"
-  }
+  }  
 }
