@@ -1,10 +1,8 @@
 const express = require('express');
+const mainController = require('./Controlers/mainController');
 
 const router= express.Router();
 
-router.get('/', (req, res) => {
-    console.log('hello');
-    res.send({hello: 'hello'})
-});
+router.get('/', mainController.homePage);
 
 module.exports = router;
