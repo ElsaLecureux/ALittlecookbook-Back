@@ -7,7 +7,7 @@ const mainController = {
     try {
       const recette = await datamapper.getRecipe();
       console.log(recette);
-      response.send({recette: recette})
+      response.json(recette)
      } catch (error) {
       console.log(error);
       response.status(500).render('error', {
