@@ -1,7 +1,11 @@
 const client = require('./database');
 
 const dataMapper = {
-  getRecipe: async function () {
+  getAllRecipes: async function () {
+    const result = await client.query(`SELECT recipe.id, recipe.name, recipe.image_url FROM recipe`);
+    return result.rows;
+  },
+  getOneRecipe: async function () {
     const result = await client.query(`SELECT recipe.id, recipe.name, recipe.image_url, recipe.preparation_time, recipe.cooking_time, 
     instructions.instruction_name, instructions.instruction_description,
     ingredients.ingredient_name, ingredients.ingredient_quantity

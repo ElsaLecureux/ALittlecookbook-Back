@@ -5,7 +5,7 @@ const mainController = {
   // méthode pour la page d'accueil
   homePage: async function (request, response) {
     try {
-      const recette = await datamapper.getRecipe();
+      const recette = await datamapper.getAllRecipes();
       console.log(recette);
       response.json(recette)
      } catch (error) {
