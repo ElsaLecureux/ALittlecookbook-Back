@@ -5,7 +5,8 @@ const dataMapper = {
     const result = await client.query(`SELECT recipe.id, recipe.name, recipe.image_url FROM recipe`);
     return result.rows;
   },
-  getOneRecipe: async function () {
+  getOneRecipe: async function (recipeId) {
+    console.log('recipeId in getOneRecipe method',recipeId);
     const result = await client.query(`SELECT recipe.id, recipe.name, recipe.image_url, recipe.preparation_time, recipe.cooking_time, 
     instructions.instruction_name, instructions.instruction_description,
     ingredients.ingredient_name, ingredients.ingredient_quantity
@@ -21,7 +22,8 @@ LEFT JOIN (
     JOIN ingredient ON recipe_has_ingredient.ingredient_id = ingredient.id
     GROUP BY recipe_id
 ) ingredients ON ingredients.recipe_id = recipe.id
-WHERE recipe.id = 6;`);
+WHERE recipe.id = $1`, [recipeId]);
+    console.log(result.rows);
     return result.rows;
   }, 
  
