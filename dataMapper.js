@@ -23,9 +23,13 @@ LEFT JOIN (
     GROUP BY recipe_id
 ) ingredients ON ingredients.recipe_id = recipe.id
 WHERE recipe.id = $1`, [recipeId]);
+    return result.rows;
+  },
+  getAllCategories: async function () {
+    const result = await client.query(`SELECT category.id, category.name, category.image_url FROM category`);
     console.log(result.rows);
     return result.rows;
-  }, 
+  } 
  
 };
 
