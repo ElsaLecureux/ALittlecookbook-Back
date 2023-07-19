@@ -7,10 +7,10 @@ VALUES (
         '/images/appetizer.gif'
     ), (
         'Main Course',
-        '/images/appetizer.gif'
+        '/images/maincourse.png'
     ), (
         'Dessert',
-        '/images/appetizer.gif'
+        '/images/dessert.jpg'
     ), (
         'Vegetarian',
         '/images/vegetarian.jpg'
@@ -45,17 +45,17 @@ VALUES (
         '45min'
     ), (
         'Guacamole',
-        '/images/vegan.jpg',
+        '/images/guacamole.jpg',
         '20min',
         ''
     ), (
         'Hummus',
-        '/images/vegan.jpg',
+        '/images/hummus.jpg',
         '20min',
         ''
     ), (
         'Dahl',
-        '/images/vegetarian.jpg',
+        '/images/dahl.jpg',
         '20min',
         '30min'
     ), (
@@ -65,7 +65,7 @@ VALUES (
         '50min'
     ), (
         'Focaccia',
-        '/images/vegetarian.jpg',
+        '/images/focaccia.jpg',
         '1h30',
         '30min'
     );
