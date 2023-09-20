@@ -62,7 +62,7 @@ VALUES (
         'Ratatouille',
         '/images/ratatouille.jpg',
         '30min',
-        '50min'
+        '1h30'
     ), (
         'Focaccia',
         '/images/focaccia.jpg',
@@ -76,7 +76,7 @@ VALUES (3, 1), (3, 2), (3, 3), (3, 4), (1, 5), (1, 6), (2, 7), (2, 8), (1, 9), (
 
 INSERT INTO
     "ingredient" ("name", "image_url")
-VALUES ('can chickpeas', ''), ('lemon', ''), ('tahini', ''), ('garlic clove', ''), ('olive oil', ''), ('ground cumin', ''), ('sea salt', ''), ('aquafaba', ''), ('paprika', ''), ('avocados', ''), ('shallot', ''), ('tomato', ''), ('jalapeño', ''), ('fresh cilantro', ''), ('onion', ''), ('zucchini', ''), ('eggplant', ''), ('bell peppers', ''), ('thym', ''), ('rosemary', ''), ('black pepper', ''), ('flour', ''), ('sugar', ''), ('eggs', ''), ('chocolate', ''), ('heavy cream', ''), ('milk', ''), ('can tomato puree', '');
+VALUES ('can chickpeas', ''), ('lemon', ''), ('tahini', ''), ('garlic clove', ''), ('olive oil', ''), ('ground cumin', ''), ('sea salt', ''), ('aquafaba', ''), ('paprika', ''), ('avocados', ''), ('shallot', ''), ('tomato', ''), ('jalapeño', ''), ('fresh cilantro', ''), ('onion', ''), ('zucchini', ''), ('eggplant', ''), ('bell peppers', ''), ('thym', ''), ('rosemary', ''), ('black pepper', ''), ('flour', ''), ('sugar', ''), ('eggs', ''), ('chocolate', ''), ('heavy cream', ''), ('milk', ''), ('can tomato puree', ''), ('active dry yeast', ''), ('water', '');
 
 INSERT INTO
     "recipe_has_ingredient" (
@@ -84,7 +84,7 @@ INSERT INTO
         "recipe_id",
         "ingredient_id"
     )
-VALUES ('250gr', 6, 1), ('1 large', 6, 2), ('60ml', 6, 3), ('1', 6, 4), ('30ml', 6, 5), ('', 6, 6), ('1/2 teaspoon', 6, 7), ('30 to 45ml', 6, 8), ('dash', 6, 9), ('2', 5, 10), ('1', 5, 11), ('1 plum', 5, 12), ('1/4', 5, 13), ('3 tablesppons chopped', 5, 14), ('1', 5, 2), ('2', 8, 15), ('4', 8, 4), ('1', 8, 17), ('6 ripe', 8, 12), ('1 red and 1 yellow', 8, 18), ('3', 8, 16), ('a pinch of', 8, 7), ('a pinch of', 8, 21), ('fresh', 8, 19), ('fresh', 8, 20), ('2 tablespoons of', 8, 5);
+VALUES ('250gr', 6, 1), ('1 large', 6, 2), ('60ml', 6, 3), ('1', 6, 4), ('30ml', 6, 5), ('', 6, 6), ('1/2 teaspoon', 6, 7), ('30 to 45ml', 6, 8), ('dash', 6, 9), ('2', 5, 10), ('1', 5, 11), ('1 plum', 5, 12), ('1/4', 5, 13), ('3 tablesppons chopped', 5, 14), ('1', 5, 2), ('2', 8, 15), ('4', 8, 4), ('1', 8, 17), ('6 ripe', 8, 12), ('1 red and 1 yellow', 8, 18), ('3', 8, 16), ('a pinch of', 8, 7), ('a pinch of', 8, 21), ('fresh', 8, 19), ('fresh', 8, 20), ('2 tablespoons of', 8, 5), ('325gr', 9, 22), ('120ml' 9, 5), ('2 1/4 tsp', 9, 29), ('235ml', 9, 30), ('1/2tsp', 9, 7), ('1tbsp chopped', 9, 19), ('1tbsp chopped', 9, 20), ('1/2tsp, 9, 23');
 
 INSERT INTO
     "instruction" (
@@ -132,6 +132,22 @@ VALUES (
         'Baking',
         'Cover your dish with baking paper and bake for 1h30. Allow it to cool slightly before starting to eat.',
         8
+    ), (
+        'First',
+        'In a large bowl, combine the warm water, yeast, and sugar. Stir a few times then let sit for 5 minutes.',
+        9
+    ), (
+        'Making the dough',
+        'Add half the flour and half the olive oil mixture the bowl. Stir 3 to 4 times until the flour has moistened. Let sit for another 5 minutes. Stir in the remaining flour and add the salt. When the dough comes together, transfer to a floured board and knead 10 to 15 times until smooth.',
+        9
+    ), (
+        'Proofing',
+        'Transfer the dough to a large oiled bowl, cover with a warm, damp towel and let rise for 1 hour. (It’s best to let the dough rise in a warmer area of your kitchen).',
+        9
+    ), (
+        'Baking',
+        'After 1 hour, heat the oven to 450 degrees Fahrenheit. Oil the bottom of a 9-inch by 13-inch rimmed baking sheet. Transfer the dough to the baking sheet then press it down into the pan using your fingers. Drizzle olive oil on the top and let the dough tise for 20min until it puffs slightly. Bake until golden brown, 15 to 20 minutes. Cool baked focaccia bread on a wire rack.',
+        9
     );
 
 COMMIT;
