@@ -76,7 +76,7 @@ VALUES (3, 1), (3, 2), (3, 3), (3, 4), (1, 5), (1, 6), (2, 7), (2, 8), (1, 9), (
 
 INSERT INTO
     "ingredient" ("name", "image_url")
-VALUES ('can chickpeas', ''), ('lemon', ''), ('tahini', ''), ('garlic clove', ''), ('olive oil', ''), ('ground cumin', ''), ('sea salt', ''), ('aquafaba', ''), ('paprika', ''), ('avocados', ''), ('shallot', ''), ('tomato', ''), ('jalapeño', ''), ('fresh cilantro', ''), ('onion', ''), ('zucchini', ''), ('eggplant', ''), ('bell peppers', ''), ('thym', ''), ('rosemary', ''), ('black pepper', ''), ('flour', ''), ('sugar', ''), ('eggs', ''), ('chocolate', ''), ('heavy cream', ''), ('milk', '');
+VALUES ('can chickpeas', ''), ('lemon', ''), ('tahini', ''), ('garlic clove', ''), ('olive oil', ''), ('ground cumin', ''), ('sea salt', ''), ('aquafaba', ''), ('paprika', ''), ('avocados', ''), ('shallot', ''), ('tomato', ''), ('jalapeño', ''), ('fresh cilantro', ''), ('onion', ''), ('zucchini', ''), ('eggplant', ''), ('bell peppers', ''), ('thym', ''), ('rosemary', ''), ('black pepper', ''), ('flour', ''), ('sugar', ''), ('eggs', ''), ('chocolate', ''), ('heavy cream', ''), ('milk', ''), ('can tomato puree', '');
 
 INSERT INTO
     "recipe_has_ingredient" (
@@ -84,7 +84,7 @@ INSERT INTO
         "recipe_id",
         "ingredient_id"
     )
-VALUES ('250gr', 6, 1), ('1 large', 6, 2), ('60ml', 6, 3), ('1', 6, 4), ('30ml', 6, 5), ('', 6, 6), ('1/2 teaspoon', 6, 7), ('30 to 45ml', 6, 8), ('dash', 6, 9), ('2', 5, 10), ('1', 5, 11), ('1 plum', 5, 12), ('1/4', 5, 13), ('3 tablesppons chopped', 5, 14), ('1', 5, 2);
+VALUES ('250gr', 6, 1), ('1 large', 6, 2), ('60ml', 6, 3), ('1', 6, 4), ('30ml', 6, 5), ('', 6, 6), ('1/2 teaspoon', 6, 7), ('30 to 45ml', 6, 8), ('dash', 6, 9), ('2', 5, 10), ('1', 5, 11), ('1 plum', 5, 12), ('1/4', 5, 13), ('3 tablesppons chopped', 5, 14), ('1', 5, 2), ('2', 8, 15), ('4', 8, 4), ('1', 8, 17), ('6 ripe', 8, 12), ('1 red and 1 yellow', 8, 18), ('3', 8, 16), ('a pinch of', 8, 7), ('a pinch of', 8, 21), ('fresh', 8, 19), ('fresh', 8, 20), ('2 tablespoons of', 8, 5);
 
 INSERT INTO
     "instruction" (
@@ -117,9 +117,21 @@ VALUES (
         'Serve immediately, or cover with the pit of the avocado in the bowl to help it stay fresh and refrigerate for 1 hour for improved flavor.',
         5
     ), (
-        'Prepare the vegetables',
-        '',
+        'Prepare the ingredients',
+        'Peel and slice finely the garlic and onions. Make thin slices of each vegetable and store them separately on a tray, reserve the other parts of the vegetables for the sauce.',
         8
-    ), ('Make the sauce', '', 8), ('Start assembling', '', 8), ('Baking', '', 8);
+    ), (
+        'Make the sauce',
+        'Pour some olive oil in a pan and start fry the onions until golden brown. Add all the unused parts of vegetables, when they are cooked pour the tomato puree and some of the herbs and let it simmer for 10 minutes. Pour into a blender without the herbs and blend until smooth texture.',
+        8
+    ), (
+        'Start assembling',
+        'Pour the sauce in the bottom of your baking dish and then layer the vegetables slices making a rainbow of veggies. Drizzle some olive oil, salt and pepper and finish with the remaining herbs.',
+        8
+    ), (
+        'Baking',
+        'Cover your dish with baking paper and bake for 1h30. Allow it to cool slightly before starting to eat.',
+        8
+    );
 
 COMMIT;
