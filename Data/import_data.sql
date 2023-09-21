@@ -57,7 +57,7 @@ VALUES (
         'Dahl',
         '/images/dahl.jpg',
         '20min',
-        '30min'
+        '45min'
     ), (
         'Ratatouille',
         '/images/ratatouille.jpg',
@@ -76,7 +76,7 @@ VALUES (3, 1), (3, 2), (3, 3), (3, 4), (1, 5), (1, 6), (2, 7), (2, 8), (1, 9), (
 
 INSERT INTO
     "ingredient" ("name", "image_url")
-VALUES ('can chickpeas', ''), ('lemon', ''), ('tahini', ''), ('garlic clove', ''), ('olive oil', ''), ('ground cumin', ''), ('sea salt', ''), ('aquafaba', ''), ('paprika', ''), ('avocados', ''), ('shallot', ''), ('tomato', ''), ('jalapeño', ''), ('fresh cilantro', ''), ('onion', ''), ('zucchini', ''), ('eggplant', ''), ('bell peppers', ''), ('thym', ''), ('rosemary', ''), ('black pepper', ''), ('flour', ''), ('sugar', ''), ('eggs', ''), ('chocolate', ''), ('heavy cream', ''), ('milk', ''), ('can tomato puree', ''), ('active dry yeast', ''), ('water', '');
+VALUES ('can chickpeas', ''), ('lemon', ''), ('tahini', ''), ('garlic clove', ''), ('olive oil', ''), ('ground cumin', ''), ('sea salt', ''), ('aquafaba', ''), ('paprika', ''), ('avocados', ''), ('shallot', ''), ('tomato', ''), ('jalapeño', ''), ('fresh cilantro', ''), ('onion', ''), ('zucchini', ''), ('eggplant', ''), ('bell peppers', ''), ('thym', ''), ('rosemary', ''), ('black pepper', ''), ('flour', ''), ('sugar', ''), ('eggs', ''), ('chocolate', ''), ('heavy cream', ''), ('milk', ''), ('can tomato puree', ''), ('active dry yeast', ''), ('water', ''), ('cream', ''), ('butter', ''), ('ginger', ''), ('coral lentils', ''), ('ground coriander', ''), ('ground curcuma', ''), ('ground cinnamon', ''), ('vegetable broth', ''), ('vegetables broth', ''), ('tomato paste', '');
 
 INSERT INTO
     "recipe_has_ingredient" (
@@ -84,7 +84,7 @@ INSERT INTO
         "recipe_id",
         "ingredient_id"
     )
-VALUES ('250gr', 6, 1), ('1 large', 6, 2), ('60ml', 6, 3), ('1', 6, 4), ('30ml', 6, 5), ('', 6, 6), ('1/2 teaspoon', 6, 7), ('30 to 45ml', 6, 8), ('dash', 6, 9), ('2', 5, 10), ('1', 5, 11), ('1 plum', 5, 12), ('1/4', 5, 13), ('3 tablesppons chopped', 5, 14), ('1', 5, 2), ('2', 8, 15), ('4', 8, 4), ('1', 8, 17), ('6 ripe', 8, 12), ('1 red and 1 yellow', 8, 18), ('3', 8, 16), ('a pinch of', 8, 7), ('a pinch of', 8, 21), ('fresh', 8, 19), ('fresh', 8, 20), ('2 tablespoons of', 8, 5), ('325gr', 9, 22), ('120ml' 9, 5), ('2 1/4 tsp', 9, 29), ('235ml', 9, 30), ('1/2tsp', 9, 7), ('1tbsp chopped', 9, 19), ('1tbsp chopped', 9, 20), ('1/2tsp, 9, 23');
+VALUES ('250gr', 6, 1), ('1 large', 6, 2), ('60ml', 6, 3), ('1', 6, 4), ('30ml', 6, 5), ('', 6, 6), ('1/2 teaspoon', 6, 7), ('30 to 45ml', 6, 8), ('dash', 6, 9), ('2', 5, 10), ('1', 5, 11), ('1 plum', 5, 12), ('1/4', 5, 13), ('3 tablesppons chopped', 5, 14), ('1', 5, 2), ('2', 8, 15), ('4', 8, 4), ('1', 8, 17), ('6 ripe', 8, 12), ('1 red and 1 yellow', 8, 18), ('3', 8, 16), ('a pinch of', 8, 7), ('a pinch of', 8, 21), ('fresh', 8, 19), ('fresh', 8, 20), ('2 tbsp of', 8, 5), ('325gr', 9, 22), ('120ml' 9, 5), ('2 1/4 tsp', 9, 29), ('235ml', 9, 30), ('1/2tsp', 9, 7), ('1tbsp chopped', 9, 19), ('1tbsp chopped', 9, 20), ('1/2tsp', 9, 23), ('1/2 cup', 7, 31), ('1 tbsp', 7, 32), ('1', 7, 15), ('1 tbsp', 7, 33), ('3/4 cup', 7, 34), ('1/2 tsp', 7, 6), ('1/2 tsp', 7, 35), ('1/2 tsp', 7, 36), ('1/2 tsp', 7, 37), ('4 cups', 7, 38), ('2 tbsp', 7, 39), ('2 tbsp', 7, 14), ('a pinch of', 7, 7), ('a pinch of', 7, 21);
 
 INSERT INTO
     "instruction" (
@@ -148,6 +148,22 @@ VALUES (
         'Baking',
         'After 1 hour, heat the oven to 450 degrees Fahrenheit. Oil the bottom of a 9-inch by 13-inch rimmed baking sheet. Transfer the dough to the baking sheet then press it down into the pan using your fingers. Drizzle olive oil on the top and let the dough tise for 20min until it puffs slightly. Bake until golden brown, 15 to 20 minutes. Cool baked focaccia bread on a wire rack.',
         9
+    ), (
+        '1',
+        'In a pot, let the butter melt, add the chopped garlic, onion and ginger and fry them for 2min.',
+        7
+    ), (
+        '2',
+        'Add the lentils and spices and mix well. Pour the broth into the pot and bring to a boil. Cover and let it cook for 15min.',
+        7
+    ), (
+        '3',
+        'Thin down the tomato paste with the cream and pour the mix into the soup. Cook it for 5min without a boil.',
+        7
+    ), (
+        '4',
+        'Pour into bowls, add salt pepper and the chopped fresh cilantro. You can eat it with a naan.',
+        7
     );
 
 COMMIT;
